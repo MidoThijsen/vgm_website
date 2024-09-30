@@ -26,17 +26,17 @@ jobs:
 
     - name: 'Log in to Azure Container Registry'
       run: |
-        az acr login --name websiteVGM
+        az acr login --name websitevgm
 
     # Build the Docker image
     - name: 'Build Docker Image'
       run: |
-        docker build . -t websiteVGM.azurecr.io/vgm_website_test:v1
+        docker build . -t websitevgm.azurecr.io/vgm_website_test:v1
 
     # Push the Docker image to ACR
     - name: 'Push Docker Image to ACR'
       run: |
-        docker push websiteVGM.azurecr.io/vgm_website_test:v1
+        docker push websitevgm.azurecr.io/vgm_website_test:v1
 
     # Deploy the container to Azure Web App for Containers
     - name: 'Deploy to Azure Web App'
@@ -44,4 +44,4 @@ jobs:
         az webapp config container set \
         --name vgm_website_test \
         --resource-group portalvgm \
-        --docker-custom-image-name websiteVGM.azurecr.io/vgm_website_test:v1
+        --docker-custom-image-name websitevgm.azurecr.io/vgm_website_test:v1
