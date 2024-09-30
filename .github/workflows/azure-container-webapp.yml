@@ -26,22 +26,22 @@ jobs:
 
     - name: 'Log in to Azure Container Registry'
       run: |
-        az acr login --name myContainerRegistry
+        az acr login --name websiteVGM
 
     # Build the Docker image
     - name: 'Build Docker Image'
       run: |
-        docker build . -t mycontainerregistry.azurecr.io/myflaskapp:v1
+        docker build . -t websiteVGM.azurecr.io/myflaskapp:v1
 
     # Push the Docker image to ACR
     - name: 'Push Docker Image to ACR'
       run: |
-        docker push mycontainerregistry.azurecr.io/myflaskapp:v1
+        docker push websiteVGM.azurecr.io/myflaskapp:v1
 
     # Deploy the container to Azure Web App for Containers
     - name: 'Deploy to Azure Web App'
       run: |
         az webapp config container set \
         --name myFlaskAppWebApp \
-        --resource-group myResourceGroup \
-        --docker-custom-image-name mycontainerregistry.azurecr.io/myflaskapp:v1
+        --resource-group portalvgm \
+        --docker-custom-image-name websiteVGM.azurecr.io/myflaskapp:v1
