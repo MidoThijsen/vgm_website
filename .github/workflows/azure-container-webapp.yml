@@ -31,17 +31,17 @@ jobs:
     # Build the Docker image
     - name: 'Build Docker Image'
       run: |
-        docker build . -t websiteVGM.azurecr.io/myflaskapp:v1
+        docker build . -t websiteVGM.azurecr.io/vgm_website_test:v1
 
     # Push the Docker image to ACR
     - name: 'Push Docker Image to ACR'
       run: |
-        docker push websiteVGM.azurecr.io/myflaskapp:v1
+        docker push websiteVGM.azurecr.io/vgm_website_test:v1
 
     # Deploy the container to Azure Web App for Containers
     - name: 'Deploy to Azure Web App'
       run: |
         az webapp config container set \
-        --name myFlaskAppWebApp \
+        --name vgm_website_test \
         --resource-group portalvgm \
-        --docker-custom-image-name websiteVGM.azurecr.io/myflaskapp:v1
+        --docker-custom-image-name websiteVGM.azurecr.io/vgm_website_test:v1
