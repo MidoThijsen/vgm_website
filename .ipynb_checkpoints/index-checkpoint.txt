@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtered Real Estate Headlines</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .headline-list {
+            margin-bottom: 40px;
+        }
+        .headline-list h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .headline-list ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .headline-list ul li {
+            margin-bottom: 5px;
+        }
+        a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Relevant Commercial Real Estate Headlines</h1>
+    
+    <div class="headline-list">
+        <ul>
+            {% for headline in headlines %}
+                <li>{{ headline }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <script>
+        // Automatically refresh the page every 15 minutes (900000 milliseconds)
+        setTimeout(function() {
+            window.location.reload();
+        }, 900000);  // 15 minutes
+    </script>
+</body>
+</html>

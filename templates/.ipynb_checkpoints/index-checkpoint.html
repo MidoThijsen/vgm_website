@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relevant Commercial Real Estate Headlines</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em; /* Increased font size for the title */
+        }
+        .website-block {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        .website-block h2 {
+            font-size: 1.8em; /* Bigger size for website titles */
+            margin-bottom: 10px;
+        }
+        .website-block ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .website-block ul li {
+            font-size: 1.5em; /* Increased size for headlines */
+            margin-bottom: 10px;
+        }
+        a {
+            text-decoration: none; /* Remove the underline */
+            color: inherit;        /* Inherit the color from parent element */
+            cursor: pointer;       /* Keep the cursor as pointer to indicate it's a link */
+        }
+        a:hover {
+            text-decoration: underline; /* Underline only on hover */
+            color: #007BFF;             /* Optional: change color on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Relevant Commercial Real Estate Headlines</h1>
+    
+    {% for site in filtered_headlines %}
+        <div class="website-block">
+            <!-- Extracting website name from the URL -->
+            <h2>
+                <a href="{{ site.url }}" target="_blank">
+                    {{ site.url | replace('https://', '') | replace('www.', '') | replace('/', '') }}
+                </a>
+            </h2>
+            <ul>
+                {% for headline in site.headlines %}
+                    <li>{{ headline }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endfor %}
+
+    <script>
+        // Automatically refresh the page every 15 minutes (900000 milliseconds)
+        setTimeout(function() {
+            window.location.reload();
+        }, 900000);  // 15 minutes
+    </script>
+</body>
+</html>

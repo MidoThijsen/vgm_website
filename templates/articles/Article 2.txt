@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juridische strijd over aannemingsovereenkomst bij Gerechtshof Amsterdam</title>
+</head>
+<body>
+    <h1 styl="font-size:20px;">Juridische strijd over aannemingsovereenkomst bij Gerechtshof Amsterdam</h1>
+    <p>Partijen die een aannemingsovereenkomst zijn aangegaan, stonden in een juridische strijd over de uitvoering van de overeenkomst. De zaak draait om de oplevering van het werk, de betaling van een restant van de aanneemsom en de verschuldigde kosten voor meerwerk. Het Gerechtshof Amsterdam heeft op 30 juli 2024 haar oordeel geveld, waarbij enkele vorderingen zijn toegewezen en andere zijn afgewezen.</p>
+
+    <p>De appellanten, betrokken bij de hotelontwikkeling, hadden in 2018 een aannemingsovereenkomst afgesloten met Meuviro B.V. voor het vervaardigen van op maat gemaakt interieur voor hun woning. Geschillen ontstonden over de uitvoering, en na een eerdere rechtbankuitspraak zijn de appellanten in hoger beroep gegaan. Het hof bevestigde dat er geen eindoplevering had plaatsgevonden, vooral omdat Meuviro verschillende werkzaamheden niet had afgerond en verklaarde de overeenkomst gedeeltelijk ontbonden.</p>
+
+    <p>Het hof oordeelde dat de appellanten Meuviro niet de gelegenheid hebben gegeven om de resterende werkzaamheden af te ronden en dat de meerwerkfacturen gerechtvaardigd zijn. Ook werd de contractuele rente, die boven de wettelijke rente uitstijgt, afgewezen als oneerlijk. Uiteindelijk werden de appellanten veroordeeld om de door Meuviro gevorderde bedragen te betalen, terwijl het hof enkele aspecten van de eerdere uitspraak wijzigde. Deze uitspraak benadrukt de nuances in de uitvoering van aannemingsovereenkomsten en de verantwoordelijkheden van alle partijen.</p>
+
+    <p>Dit artikel is relevant: <strong>Juist</strong></p>
+    <p>Link to the original page: <a href="https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:GHAMS:2024:2120&showbutton=true&keyword=vastgoed&idx=1">https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:GHAMS:2024:2120&showbutton=true&keyword=vastgoed&idx=1</a></p>
+</body>
+</html>

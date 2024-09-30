@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rechtbank Noord-Holland beoordeelt huurachterstand en vernietigt oneerlijke bedingen</title>
+</head>
+<body>
+    <h1>Rechtbank Noord-Holland beoordeelt huurachterstand en vernietigt oneerlijke bedingen</h1>
+    <p><strong>Abstract:</strong> In een recente uitspraak heeft de Rechtbank Noord-Holland een vordering tot betaling van huurachterstand van Helder Vastgoed B.V. toegewezen, maar tegelijkertijd enkele bepalingen uit de huurovereenkomst vernietigd vanwege oneerlijkheid. De rechtbank concludeerde dat de huurder excessieve boetes en incassokosten was opgelegd, wat in strijd is met de wetgeving rond consumentenovereenkomsten. De eisende partij heeft een bedrag van € 838,06 aan achterstallige huurpenningen toegewezen gekregen.</p>
+
+    <p>In een geschil tussen Helder Vastgoed B.V. en een huurder dat voor de rechtbank Noord-Holland werd behandeld, eiste de verhuurder betaling van een achterstand in huur en servicekosten. De huurder werd niet gehoord in de procedure, waardoor de rechtbank bij verstek een oordeel moest vellen. Helder Vastgoed B.V. had naar voren gebracht dat de huurder herhaaldelijk in gebreke was gebleven met het tijdig betalen van de huurpenningen.</p>
+
+    <p>Bij de beoordeling van de huurovereenkomst diende de rechtbank ambtshalve te onderzoeken of er bedingen in de algemene voorwaarden waren opgenomen die als oneerlijk konden worden aangemerkt volgens de richtlijnen die zijn vastgelegd in de Europese consumentenwetgeving. De rechtbank oordeelde dat het huurprijswijzigingsbeding en de bepalingen met betrekking tot servicekosten niet oneerlijk waren, aangezien deze in lijn waren met de wet.</p>
+
+    <p>Echter, de rechtbank oordeelde dat de bepalingen over rentekosten, incassokosten en boetes niet redelijk waren. De voorwaarden die de huurder verplichtten om naast de wettelijke rente ook een boete van € 25,00 per dag te betalen bij een tekortkoming, werden gezien als een aanzienlijke belasting voor de huurder. Ook het incassokostenbeding, dat inhield dat de huurder zonder notificatie al incassokosten verschuldigd was, werd als oneerlijk gekwalificeerd. Deze bevindingen leidden tot een gedeeltelijke afwijzing van de vordering in verband met de opgelegde kosten.</p>
+
+    <p>Uiteindelijk kende de rechtbank een totaal bedrag van € 838,06 aan achterstallige huurpenningen toe aan Helder Vastgoed B.V. en legde de proceskosten ten laste van de gedaagde partij. De uitspraak benadrukt zowel de rechten van verhuurders om huur te vorderen, als de bescherming van consumenten tegen onredelijke contractuele bedingen in de huursector.</p>
+
+    <p>Dit artikel is relevant: <strong>Juist</strong></p>
+    <p>Link to the original page: <a href="https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:RBNHO:2024:9210&showbutton=true&keyword=vastgoed&idx=2">https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:RBNHO:2024:9210&showbutton=true&keyword=vastgoed&idx=2</a></p>
+</body>
+</html>
