@@ -1,10 +1,10 @@
-# Use the Python base image
+# Use the official Python image as a base image
 FROM python:3.9
 
 # Set the working directory in the container
 WORKDIR /usr/src/app
 
-# Install dependencies for Chrome and ChromeDriver
+# Install dependencies for Chrome and ChromeDriver (optional for Selenium usage)
 RUN apt-get update && apt-get install -y \
     wget \
     unzip \
@@ -39,25 +39,21 @@ RUN apt-get update && apt-get install -y \
     chromium \
     chromium-driver
 
-# # Optional: Install a specific version of Google Chrome (v114.0.5735.90)
-# RUN curl -sSL https://dl.google.com/linux/linux_signing_key.pub | apt-key add - && \
-#     echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list && \
-#     apt-get update && apt-get install -y google-chrome-stable=114.0.5735.90-1
-
-# # Optional: Install a specific version of ChromeDriver (v114.0.5735.90)
-# RUN wget -N https://chromedriver.storage.googleapis.com/114.0.5735.90/chromedriver_linux64.zip && \
-#     unzip chromedriver_linux64.zip && \
-#     mv chromedriver /usr/local/bin/ && \
-#     chmod +x /usr/local/bin/chromedriver
-
 # Copy the current directory contents into the container
 COPY . .
 
 # Upgrade pip to the latest version
 RUN pip install --upgrade pip
 
-# Install the required Python packages (including selenium)
+# Install the required Python packages (including Flask and selenium if required)
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Run the Python script
-CMD ["python", "./main.py"]
+# Set environment variables for Flask
+ENV FLASK_APP=main.py
+ENV FLASK_ENV=production
+
+# Expose port 5000 (default for Flask)
+EXPOSE 5000
+
+# Run the Flask app (ensure Flask listens on 0.0.0.0 to be externally accessible)
+CMD ["flask", "run", "--host=0.0.0.0", "--port=5000"]
