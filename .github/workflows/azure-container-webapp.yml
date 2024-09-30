@@ -1,0 +1,47 @@
+name: Build and Deploy Flask App to Azure
+
+on:
+  push:
+    branches:
+      - main  # Trigger the action when code is pushed to the main branch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Checkout the repository
+    - name: 'Checkout GitHub Actions'
+      uses: actions/checkout@v3
+
+    # Set up Docker
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v2
+
+    # Log in to Azure Container Registry (ACR)
+    - name: 'Log in to Azure'
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+    - name: 'Log in to Azure Container Registry'
+      run: |
+        az acr login --name myContainerRegistry
+
+    # Build the Docker image
+    - name: 'Build Docker Image'
+      run: |
+        docker build . -t mycontainerregistry.azurecr.io/myflaskapp:v1
+
+    # Push the Docker image to ACR
+    - name: 'Push Docker Image to ACR'
+      run: |
+        docker push mycontainerregistry.azurecr.io/myflaskapp:v1
+
+    # Deploy the container to Azure Web App for Containers
+    - name: 'Deploy to Azure Web App'
+      run: |
+        az webapp config container set \
+        --name myFlaskAppWebApp \
+        --resource-group myResourceGroup \
+        --docker-custom-image-name mycontainerregistry.azurecr.io/myflaskapp:v1
