@@ -37,7 +37,14 @@ RUN apt-get update && apt-get install -y \
     lsb-release \
     libu2f-udev \
     chromium \
-    chromium-driver
+    chromium-driver \
+    openssh-server  # Install OpenSSH server
+
+# Configure SSH: Set root password and ensure SSH service can start
+RUN echo 'root:Docker!' | chpasswd && mkdir /var/run/sshd
+
+# Expose SSH port 2222
+EXPOSE 2222
 
 # Copy the current directory contents into the container
 COPY . .
@@ -52,8 +59,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 ENV FLASK_APP=main.py
 ENV FLASK_ENV=production
 
-# Expose port 5000 (default for Flask)
+# Expose port 5000 for Flask
 EXPOSE 5000
 
-# Run the Flask app (ensure Flask listens on 0.0.0.0 to be externally accessible)
-CMD ["flask", "run", "--host=0.0.0.0", "--port=5000"]
+# Start SSH and the Flask app
+CMD ["/usr/sbin/sshd", "-D"] & ["flask", "run", "--host=0.0.0.0", "--port=5000"]
