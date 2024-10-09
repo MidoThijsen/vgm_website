@@ -62,5 +62,5 @@ ENV FLASK_ENV=production
 # Expose port 5000 for Flask
 EXPOSE 5000
 
-# Start SSH and the Flask app
-CMD ["/usr/sbin/sshd", "-D"] & ["flask", "run", "--host=0.0.0.0", "--port=5000"]
+# Start SSH service and the Flask app
+CMD service ssh start && flask run --host=0.0.0.0 --port=5000
