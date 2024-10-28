@@ -19,7 +19,7 @@ def filter_headlines(titles):
     ]
     
     data = {
-        "model": "gpt-4",  # or "gpt-3.5-turbo"
+        "model": "gpt-4o-mini",  # or "gpt-3.5-turbo"
         "messages": messages,
         "max_tokens": 500,
         "temperature": 0.5
