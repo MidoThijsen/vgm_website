@@ -20,7 +20,7 @@ jobs:
 
     # Log in to Azure Container Registry (ACR)
     - name: 'Log in to Azure'
-      uses: azure/login@v1
+      uses: azure/login@v${{github.run_number}}
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
 
@@ -31,12 +31,12 @@ jobs:
     # Build the Docker image
     - name: 'Build Docker Image'
       run: |
-        docker build . -t websitevgm.azurecr.io/vgmwebsite:v1
+        docker build . -t websitevgm.azurecr.io/vgmwebsite:v${{github.run_number}}
 
     # Push the Docker image to ACR
     - name: 'Push Docker Image to ACR'
       run: |
-        docker push websitevgm.azurecr.io/vgmwebsite:v1
+        docker push websitevgm.azurecr.io/vgmwebsite:v${{github.run_number}}
 
     # Deploy the container to Azure Web App for Containers
     - name: 'Deploy to Azure Web App'
@@ -44,4 +44,4 @@ jobs:
         az webapp config container set \
         --name vgmwebsite \
         --resource-group portalvgm \
-        --docker-custom-image-name websitevgm.azurecr.io/vgmwebsite:v1
+        --docker-custom-image-name websitevgm.azurecr.io/vgmwebsite:v${{github.run_number}}
