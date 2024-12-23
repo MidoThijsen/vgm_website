@@ -32,12 +32,14 @@ def setup_driver():
 
 # List of websites and their CSS selectors
 websites = [
-    {"url": "https://propertynl.com/", "selector": "div.column.column_2_3 ul li h2 a"},
-    {"url": "https://www.nu.nl/", "selector": "#main ul li a div.item-title span span"},
-    {"url": "https://www.volkskrant.nl/", "selector": "#main-content article.wl-tile a header h3 span.teaser__title__value--long strong"},
-    {"url": "https://nos.nl/", "selector": "#content ul li a div h2"},
-    {"url": "https://vastgoedjournaal.nl/", "selector": "#articles a article div.article-grid-item-right div"},
-]
+        {"url": "https://propertynl.com/", "selector": "div.column.column_2_3 ul li h2 a"},
+        {"url": "https://www.nu.nl/", "selector": "#main ul li a div.item-title span span"},
+        {"url": "https://www.volkskrant.nl/", "selector": "#main-content article.wl-tile a header h3 span.teaser__title__value--long strong"},
+        {"url": "https://nos.nl/", "selector": "#content ul li a div h2"},
+        {"url": "https://vastgoedjournaal.nl/", "selector": "#articles a article div.article-grid-item-right div"},
+        {"url": "https://www.fd.nl/", "selector": "div.content-area div.xs-12.l-9.gap-1.gap-bottom.grid > div > div"},
+        {"url": "https://www.fd.nl/", "selector": "[id^='31535'] > a > div > div.text-container > h1"}
+    ]
 
 # Function to extract titles from a website using the provided CSS selector
 def extract_titles(news_url, css_selector):
