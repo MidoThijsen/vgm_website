@@ -3,7 +3,7 @@
 import requests
 
 # Your OpenAI API key
-api_key = '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'  # Replace with your actual API key
+api_key = 'api_key'  # Replace with your actual API key
 
 # Function to send the headlines to OpenAI for filtering
 def filter_headlines(titles):
